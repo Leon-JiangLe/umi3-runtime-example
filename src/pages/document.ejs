@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>API Gallery</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00238f" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="apple-mobile-web-app-title" content="API Gallery" />
+    <meta name="application-name" content="API Gallery" />
+    <meta name="msapplication-TileColor" content="#00238f" />
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
+    <meta name="theme-color" content="#00238f" />
+    <!-- <link rel="icon" href="/favicon.png" type="image/x-icon" /> -->
+  </head>
+
+  <body>
+    <noscript>Out-of-the-box mid-stage front/design solution!</noscript>
+    <div id="root">
+      <style>
+        html,
+        body,
+        #root {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
+        #root {
+          /* background-color: #F4F4F4; */
+          /* background-image: url('/apibg.jpg'); */
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+        }
+
+        .page-loading-warp {
+          padding: 98px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #loading-center-absolute {
+          height: 60px;
+          width: 60px;
+          margin: 0 auto;
+          -webkit-animation: loading-center-absolute 1s infinite;
+          animation: loading-center-absolute 1s infinite;
+        }
+
+        .object {
+          width: 20px;
+          height: 20px;
+          background-color: #00238f;
+          float: left;
+          -moz-border-radius: 50% 50% 50% 50%;
+          -webkit-border-radius: 50% 50% 50% 50%;
+          border-radius: 50% 50% 50% 50%;
+          margin-right: 20px;
+          margin-bottom: 20px;
+        }
+
+        .object:nth-child(2n + 0) {
+          margin-right: 0px;
+        }
+
+        #object_one {
+          -webkit-animation: object_one 1s infinite;
+          animation: object_one 1s infinite;
+        }
+
+        #object_two {
+          -webkit-animation: object_two 1s infinite;
+          animation: object_two 1s infinite;
+        }
+
+        #object_three {
+          -webkit-animation: object_three 1s infinite;
+          animation: object_three 1s infinite;
+        }
+
+        #object_four {
+          -webkit-animation: object_four 1s infinite;
+          animation: object_four 1s infinite;
+        }
+
+        @-webkit-keyframes loading-center-absolute {
+          100% {
+            -ms-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+
+        @keyframes loading-center-absolute {
+          100% {
+            -ms-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+
+        @-webkit-keyframes object_one {
+          50% {
+            -ms-transform: translate(20px, 20px);
+            -webkit-transform: translate(20px, 20px);
+            transform: translate(20px, 20px);
+          }
+        }
+
+        @keyframes object_one {
+          50% {
+            -ms-transform: translate(20px, 20px);
+            -webkit-transform: translate(20px, 20px);
+            transform: translate(20px, 20px);
+          }
+        }
+
+        @-webkit-keyframes object_two {
+          50% {
+            -ms-transform: translate(-20px, 20px);
+            -webkit-transform: translate(-20px, 20px);
+            transform: translate(-20px, 20px);
+          }
+        }
+
+        @keyframes object_two {
+          50% {
+            -ms-transform: translate(-20px, 20px);
+            -webkit-transform: translate(-20px, 20px);
+            transform: translate(-20px, 20px);
+          }
+        }
+
+        @-webkit-keyframes object_three {
+          50% {
+            -ms-transform: translate(20px, -20px);
+            -webkit-transform: translate(20px, -20px);
+            transform: translate(20px, -20px);
+          }
+        }
+
+        @keyframes object_three {
+          50% {
+            -ms-transform: translate(20px, -20px);
+            -webkit-transform: translate(20px, -20px);
+            transform: translate(20px, -20px);
+          }
+        }
+
+        @-webkit-keyframes object_four {
+          50% {
+            -ms-transform: translate(-20px, -20px);
+            -webkit-transform: translate(-20px, -20px);
+            transform: translate(-20px, -20px);
+          }
+        }
+
+        @keyframes object_four {
+          50% {
+            -ms-transform: translate(-20px, -20px);
+            -webkit-transform: translate(-20px, -20px);
+            transform: translate(-20px, -20px);
+          }
+        }
+      </style>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          min-height: 420px;
+          height: 100%;
+        "
+      >
+        <!-- <img src="/pro_icon.svg" alt="logo" width="256" /> -->
+        <div class="page-loading-warp">
+          <div id="loading-center-absolute">
+            <div class="object" id="object_one"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_four"></div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="/logo.svg" width="240" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
