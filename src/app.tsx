@@ -12,7 +12,7 @@ export const dva = {
 let authRoutes = null;
 let serveRoutes = null;
 
-export function patchRoutes(routes) {
+export function patchRoutes({routes}) {
   console.log('===routes===', routes);
   routes.forEach(element => {
     //add route
